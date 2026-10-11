@@ -1,59 +1,27 @@
-# NutriVida — ponto de retomada
+# NutriVida — retomada 2.4.24
 
-Salvo em 10 de outubro de 2026. Última entrega funcional: **site e APK 2.4.22**.
+Site: https://nutrivida-app.gaivotavoadora123.chatgpt.site
+Versão Android: 2.4.24, versionCode 34, pacote br.com.nutrivida.avaliacao.
+Origem local e assinatura originais mantidas. Instalar por cima sem desinstalar.
 
-## Onde está o projeto
+## Mudança desta entrega
 
-- Repositório privado: https://github.com/GZ07-MM/NutriVida/tree/main
-- Site: https://nutrivida-app.gaivotavoadora123.chatgpt.site
-- Código completo: `NutriVida-codigo-v2.4.22.zip`. Extraia a pasta `nutrivida/` para abrir o projeto. O repositório contém os pacotes de entrega; os arquivos de desenvolvimento estão dentro desse ZIP.
-- Aplicativo instalável: `NutriVida-v2.4.22.apk`.
-- Orientações de demonstração: `AVALIACAO.md`.
-- Fonte que gerou a entrega: commit `0be495ef40fe0a8e538273ddf543ffb8acfd091e` do repositório de origem do Sites. A identificação do site está em `.openai/hosting.json` no checkout do Sites; esse diretório interno não integra o ZIP exportado.
+Resposta com indicador de preparação e texto progressivo. A resposta completa é salva antes da animação; a saída do chat não perde a mensagem. Respeita movimento reduzido e leitura manual do histórico. Campo, teclado, ditado e navegação mantêm as correções 2.4.24.
 
-O ZIP de código permite editar e reconstruir o app. O APK é o resultado compilado e não substitui o código. A chave original está na cópia privada **NutriVida-assinatura-original.zip**, guardada separadamente pelo proprietário. Ela é necessária para assinar atualizações instaláveis sobre o APK existente; não publicar a chave neste repositório ou no site.
+Modo guiado com contexto das últimas mensagens de usuário: exemplos, substituições e alterações de kcal mantêm assunto e exclusões; mudança de assunto ou limpeza do chat encerra o contexto. Site e APK usam a mesma lógica, incluindo preferências e alergias cadastradas. Exemplos energéticos usam valores preparados da TACO/NEPA-UNICAMP e mostram porções, totais aproximados e fonte. Não são metas diárias pessoais.
 
-## Preferências que devem ser mantidas
+A IA continua guiada, sem conectar chave ou modelo generativo, conforme escolha anterior do proprietário. A base e o reconhecimento de intenções são limitados; isso não equivale à capacidade aberta do ChatGPT. Respostas fora da base não são inventadas.
 
-1. Atualizar **site e APK juntos** em toda alteração funcional do aplicativo. O proprietário prefere APK, e uma atualização só do site não atende à entrega.
-2. Preservar o design aprovado. Não redesenhar telas ou restaurar o design antigo ao reabrir.
-3. Preservar conta e progresso. No Android, manter pacote, origem do WebView e assinatura. Não desinstalar para aplicar a atualização.
-4. Cadastro com e-mail e senha, sem confirmação de e-mail e sem acesso como visitante.
-5. Sair da conta deve continuar como última opção do Perfil.
-6. Data de nascimento digitada DD/MM/AAAA, com barras automáticas e toque em todo o campo.
-7. Treino deve permitir escrever o nome desejado.
-8. Nutri IA com rolagem própria, campo acompanhando o teclado, sem sobreposição com a navegação e sem seleção azul ao tocar. Ditado escreve no rascunho e não envia sozinho.
-9. Ícones inferiores: Nutri IA azul, Sono roxo, Início laranja, Relatórios verde-água, Perfil preto no claro e adaptado no escuro. Ícone superior da Nutri IA azul. Manter ícone adaptativo do launcher.
+## Validação
 
-## O que foi concluído
+TypeScript, compilação web e Android, 152 verificações de API local, 86 operações offline, isolamento de contas, contexto multimensagem, animação, emojis, cancelamento, movimento reduzido, ditado e regressões de teclado/retomada passaram. APK assinado v2/v3, alinhado, frontend comparado byte a byte. Sem instalação nem teste visual em aparelho físico nesta sessão.
 
-O APK foi reconstruído integralmente com as telas e estilos atuais. Foram incluídos login local, progresso isolado por conta, migração do perfil antigo para a primeira conta criada e reconhecimento nativo de voz. Contas seguintes começam sem progresso. O site foi publicado com sucesso. O GitHub recebeu código, APK e documentos 2.4.22; os pacotes antigos 2.4.20 e 2.4.3.1 foram removidos da entrega atual, preservando o histórico Git.
+## Entrega e próxima sessão
 
-O script `android/build-apk.sh` exige a mesma versão no Manifest e no `package.json`, sempre recompila frontend e código nativo e rejeita o reaproveitamento de um APK antigo.
+Site e APK correspondem à versão 2.4.24. Repositório de entrega: https://github.com/GZ07-MM/NutriVida. Arquivos atuais esperados: NutriVida-codigo-v2.4.24.zip, NutriVida-v2.4.24.apk, README.md, RETOMADA.md e AVALIACAO.md. Ao continuar, consultar o estado atual do repositório em vez de presumir que uma conexão antiga do plugin ainda funciona. A entrega preserva o histórico Git; versões anteriores deixam de aparecer na árvore principal quando são substituídas.
 
-## Verificação e pendências
+Preservar design aprovado, ordem Nutri IA → Sono → Início → Relatórios → Perfil, contas e progresso. Atualizar site e APK em toda mudança funcional. A chave privada original fica separada do código e do APK. Site e APK têm contas/progresso separados; exportação JSON é manual. Não ampliar audiência.
 
-Passaram TypeScript, builds web/Android, 146 verificações da API local, regras de domínio, persistência offline, migração e isolamento de contas, chat/teclado e ditado. O APK passou em alinhamento e assinaturas v2/v3; seu frontend foi comparado byte a byte com o build atual.
+## Correção 2.4.24 — campos de Sono
 
-**Ainda falta conferir em celular físico:** instalação sobre a edição anterior, vínculo do progresso à primeira conta, abertura/fechamento do teclado, ditado com permissão aceita/recusada, reabertura, exportação/restauração e alternância de contas. Não tratar testes automatizados como prova de funcionamento em todos os aparelhos.
-
-Site e APK não sincronizam automaticamente contas ou progresso: o site usa armazenamento no servidor, vinculado à identidade do ChatGPT; o APK usa contas locais. Há transferência manual via backup JSON. A chave de assinatura não contém os dados pessoais nem o progresso do usuário. Esses dados devem ser exportados pelo próprio aplicativo antes de desinstalar ou trocar de aparelho.
-
-A assistente disponível oferece respostas guiadas. IA generativa, pagamentos, reconhecimento de alimentos por foto e notificações nativas em segundo plano não estão conectados. Não há recuperação de senha por e-mail no APK. O ditado depende do serviço de voz do aparelho, que pode precisar de conexão. Não foi obtida aprovação do professor ou de órgão público nesta execução.
-
-## Para a próxima sessão
-
-Leia este arquivo, `README.md` e `AVALIACAO.md`, extraia o ZIP atual e confira os arquivos presentes no repositório antes de editar. Se houver uma versão posterior, use-a como base. Não usar uma edição antiga apenas porque ela aparece no histórico.
-
-Para atualizar o site já existente, reutilize o projeto do Sites da conta do proprietário. Não criar outro site por engano. Para APK, aumentar `versionCode`, usar a mesma `versionName` do site e compilar com a chave privada original. O pacote atual é `br.com.nutrivida.avaliacao`, `versionCode` 32, `versionName` 2.4.22; origem local `https://app.nutrivida.local/`.
-
-Certificado SHA-256 original: `51e8134325fced8a0d589d6d72db881240d1b697924daad04b754de9b5f6d4ad`.
-APK SHA-256 da entrega atual: `285234e77c9a4a353abe27f5f4b96bd4b45fb1df6c6957fdd41117611a74dc53`.
-
-Mensagem sugerida ao retomar: “Continue o NutriVida a partir do RETOMADA.md deste repositório. Preserve o design e meu progresso, e entregue site e APK atualizados juntos.”
-
-## Última correção — retorno à Nutri IA
-
-Em 2.4.22, foram corrigidas medidas de teclado e deslocamento mantidas ao sair, bloquear ou voltar ao app. O controlador observa pausa/retomada, pageshow, visibilidade e foco; limpa dados transitórios, evita medidas zero e refaz a medição do campo e da navegação. A Activity Android sinaliza a retomada e o retorno do foco da janela. A permissão de ditado conserva a sessão de teclado; a saída real preserva o rascunho e encerra o foco anterior.
-
-Testes novos simulam pausa com teclado aberto, pan antigo, rotação em segundo plano, cold start, retomada com medidas atrasadas, permissão de microfone e limpeza dos listeners. TypeScript e os builds web/Android passaram; o CSS do APK foi conferido como idêntico ao 2.4.21. A instalação e a reprodução no aparelho físico continuam pendentes.
+Horários Dormir/Acordar e registro manual mantêm números, segmentos nativos e ícone de seleção dentro dos cartões. Fonte responsiva, altura de toque de 44 px, conteúdo interno sem margem excedente e grade sem largura mínima intrínseca. Texto ampliado ou tela muito estreita usa uma coluna. Mantidos seletor nativo, valores, persistência, alarmes e design. Compilações web/Android e TypeScript verificados; sem teste visual em aparelho físico. Conferir a revisão atual no GitHub ao retomar o trabalho.

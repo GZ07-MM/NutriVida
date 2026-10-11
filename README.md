@@ -1,22 +1,27 @@
-# NutriVida — site e APK 2.4.22
+# NutriVida — site e APK 2.4.24
 
-Esta entrega substitui os arquivos da edição anterior por um APK completo e o código atual, ambos na versão **2.4.22**. O APK inclui as telas atuais do site, as correções do chat e teclado, treino personalizado, cores dos ícones e o ícone adaptativo. O design aprovado foi preservado.
+Código e APK da mesma versão. Esta entrega substitui os arquivos 2.4.22 na árvore principal e preserva o histórico do repositório.
 
-- [Baixar o APK atualizado](NutriVida-v2.4.22.apk)
-- [Código completo da mesma versão](NutriVida-codigo-v2.4.22.zip)
+- [Baixar o APK atualizado](NutriVida-v2.4.24.apk)
+- [Código completo do site e do Android](NutriVida-codigo-v2.4.24.zip)
 - [Roteiro de instalação e avaliação](AVALIACAO.md)
-- [Abrir o site atualizado](https://nutrivida-app.gaivotavoadora123.chatgpt.site)
+- [Ponto de retomada do desenvolvimento](RETOMADA.md)
+- [Abrir o site](https://nutrivida-app.gaivotavoadora123.chatgpt.site)
 
-Instale o APK por cima do NutriVida existente, sem desinstalar: pacote e assinatura original foram mantidos. Na primeira criação de conta local, seu perfil e progresso antigos são vinculados ao e-mail e senha escolhidos. As próximas contas começam vazias. Não é necessário verificar e-mail.
+## Alterações
 
-O APK salva contas e progresso no aparelho. Não há sincronização automática com o site; use Exportar/Restaurar em Privacidade e segurança para transferir uma cópia. O ditado usa o serviço de voz do Android e solicita acesso ao microfone na primeira utilização.
+A Nutri IA mostra um indicador de carregamento e revela o texto progressivamente. Conversas guiadas mantêm contexto para exemplos, substituições e mudanças de kcal, respeitando preferências e exclusões. O modo guiado tem uma base limitada; ainda não há um modelo generativo conectado. A resposta completa é salva antes da animação.
 
-A assinatura e o frontend atual do APK foram conferidos; os testes de domínio, chat, ditado, contas e API passaram. Instalação e comportamento em dispositivo físico ainda precisam ser conferidos. Toda nova entrega deve atualizar site e APK juntos.
+Os horários Dormir/Acordar e os campos do registro manual de Sono usam fonte responsiva, segmentos e ícone dentro dos cartões. Em tela muito estreita ou com texto ampliado, os campos aparecem em uma coluna. As correções anteriores de teclado e retomada do chat foram mantidas.
 
-Código de origem: `0be495ef40fe0a8e538273ddf543ffb8acfd091e`. A chave de assinatura e os segredos não estão no pacote.
+## Instalar e baixar
 
-## Chat ao reabrir — correção 2.4.22
+Abra o arquivo APK e use o botão de download na página do GitHub. Instale por cima do NutriVida existente, sem desinstalar. Pacote `br.com.nutrivida.avaliacao`, versão `2.4.24`, código `34` e assinatura original mantidos.
 
-A Nutri IA descarta a geometria anterior do teclado ao sair, bloquear ou voltar ao aplicativo, recalcula o campo e a navegação e ignora medidas zero no segundo plano. O rascunho e as mensagens são preservados. No Android, a retomada e o retorno do foco da janela sinalizam a atualização do layout. O CSS do design é idêntico ao APK anterior. Testes de regressão e compilação passaram; falta conferência em celular físico.
+O APK funciona offline e salva contas e progresso no aparelho. Site e APK não sincronizam automaticamente: use exportação e restauração de backup no Perfil. A chave privada de assinatura e outros segredos não integram esta entrega.
 
-Para continuar depois, consulte [RETOMADA.md](RETOMADA.md).
+## Verificação
+
+TypeScript, builds web e Android, assinatura e alinhamento do APK passaram. O frontend do APK foi comparado byte a byte com a compilação atual. A versão 2.4.23 passou pelas verificações de contexto, animação, API local, funcionamento offline, contas, ditado e retomada; a 2.4.24 mantém essas mudanças e ajusta os campos de Sono. Instalação e inspeção visual em celular físico ainda precisam ser realizadas.
+
+Código de origem: `7a5bf10e12130645c445b84fe8d375d74c55397c`. O ZIP contém essa base e documentos de entrega atualizados. O site mantém acesso privado.
